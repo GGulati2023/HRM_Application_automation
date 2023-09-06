@@ -15,8 +15,16 @@ public class OrangeHRM_HomePage extends BasePage {
     @FindBy(xpath ="//p[@class ='oxd-userdropdown-name']" )
     WebElement txtUserName;
 
+    @FindBy(xpath ="//p[@class='oxd-text oxd-text--p orangehrm-login-forgot-header']" )
+    WebElement likForgetPassword;
+
     public String getUserName(){
 
         return txtUserName.getText();
+    }
+
+    public boolean verifyForgetPasswordLink(){
+
+      return  likForgetPassword.isEnabled();
     }
 }
