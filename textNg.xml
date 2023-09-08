@@ -4,7 +4,7 @@
     <test name="Login With Valid Credentials" >
         <parameter name="browser" value="edge"></parameter>
         <classes>
-            <class name="testCases.TC005_verify_forget_Passsword_Link" />
+            <class name="testCases.TC006DisplayUserNaneAndPassword" />
         </classes>
     </test>
 
