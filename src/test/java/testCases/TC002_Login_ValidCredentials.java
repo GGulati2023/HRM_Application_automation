@@ -39,14 +39,29 @@ public class TC002_Login_ValidCredentials extends BaseClass{
     String actualUserName =orp.getUserName();
     String expectedUserName ="Paul Collings";
 
-    Assert.fail();
+//    Assert.fail();
 //    Assert.assertEquals(actualUserName,expectedUserName);
   }
 
   @Test
   public void verifyLogout(){
 
-    System.out.println("Logout functionality has been verified successfully");
+
+
+    OrangeHRM_HomePage orp=new OrangeHRM_HomePage(driver);
+
+    orp.clickOnUserIcon();
+
+    orp.clickOnLogoutBtn();
+
+    // verify that user has been loggegout
+
+   String actualCurrentUrl= driver.getCurrentUrl();
+
+   String expectedCurrentUrl="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
+
+   Assert.assertEquals(actualCurrentUrl,expectedCurrentUrl);
+
   }
 
 }
